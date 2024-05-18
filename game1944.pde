@@ -1,8 +1,10 @@
 PImage pack;
+float a,b;
 boolean wIsDown;
 boolean aIsDown;
 boolean sIsDown;
 boolean dIsDown;
+boolean spaceIsDown;
 boolean fire;
 Airplane plane1;
 ArrayList<Bullet> bullets = new ArrayList<Bullet>();
@@ -20,14 +22,10 @@ void draw()
   background(#002fff);
   plane1.draw();
   plane1.hitbox();
-  plane1.active();
-  p1.active();
+  plane1.update();
+  p1.update();
   p1.draw();
-  if(fire)
-  {
-    bullets.add(new Bullet(p1.x, p1.y, 0.0, 8.0, 20.0));
-    p1.fire();
-  }
+  if(spaceIsDown==true) p1.fire();
 }
 void keyPressed()
 {
@@ -35,7 +33,7 @@ void keyPressed()
   if (key=='a'||key=='A') aIsDown=true;
   if (key=='s'||key=='S') sIsDown=true;
   if (key=='d'||key=='D') dIsDown=true;
-  if (key==' ') fire=true;
+  if (key==' ') spaceIsDown=true;
 }
 void keyReleased()
 {
@@ -43,4 +41,5 @@ void keyReleased()
   if (key=='a'||key=='A') aIsDown=false;
   if (key=='s'||key=='S') sIsDown=false;
   if (key=='d'||key=='D') dIsDown=false;
+  if (key==' ')
 }

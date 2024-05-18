@@ -19,7 +19,7 @@ class Bullet
   {
     image(bullet, x, y);
   }
-  void move()
+  void update()
   {
     y-=ySpeed;
     x-=xSpeed;
