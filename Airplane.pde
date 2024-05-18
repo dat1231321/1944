@@ -14,7 +14,7 @@ class Airplane {
     shotDown=true;
     fighter=pack.get(64, 0, 64, 53);
   }
-  void draw() 
+  void draw()
   {
     image(fighter, x, y);
   }

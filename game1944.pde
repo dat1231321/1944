@@ -1,5 +1,4 @@
 PImage pack;
-float a,b;
 boolean wIsDown;
 boolean aIsDown;
 boolean sIsDown;
@@ -41,5 +40,4 @@ void keyReleased()
   if (key=='a'||key=='A') aIsDown=false;
   if (key=='s'||key=='S') sIsDown=false;
   if (key=='d'||key=='D') dIsDown=false;
-  if (key==' ')
 }
